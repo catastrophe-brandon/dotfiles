@@ -53,4 +53,16 @@ if which brew &> /dev/null && [ -f "$(brew --prefix)/bin/virtualenvwrapper.sh" ]
 fi;
 
 
-alias glog="git log --all --pretty='format:%d %Cgreen%h%Creset %an - %s' --graph"
+alias glog="git log --all --pretty='format:%d %Cgreen%h%Creset %an - %s' --graph --abbrev-commit"
+alias dcb="docker-compose build"
+alias dcu="docker-compose up"
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/btweed/Downloads/google-cloud-sdk/path.bash.inc' ]; then source '/Users/btweed/Downloads/google-cloud-sdk/path.bash.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/btweed/Downloads/google-cloud-sdk/completion.bash.inc' ]; then source '/Users/btweed/Downloads/google-cloud-sdk/completion.bash.inc'; fi
+
+
+
+source /usr/local/bin/virtualenvwrapper.sh
