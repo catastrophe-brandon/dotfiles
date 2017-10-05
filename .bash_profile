@@ -66,3 +66,6 @@ if [ -f '/Users/btweed/Downloads/google-cloud-sdk/completion.bash.inc' ]; then s
 
 
 source /usr/local/bin/virtualenvwrapper.sh
+
+# powerline-daemon -q
+export LANG=en_US.utf8

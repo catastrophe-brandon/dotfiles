@@ -130,7 +130,7 @@ nnoremap <space> za
 
 " Plugin 'tmhedberg/SimplyFold'
 Plugin 'vim-scripts/indentpython.vim'
-Bundle 'Valloric/YouCompleteMe'
+" Bundle 'Valloric/YouCompleteMe'
 
 " Handle Python indentation
 au BufNewFile,BufRead *.py
@@ -145,8 +145,8 @@ au BufNewFile,BufRead *.py
 set encoding=utf-8
 
 " Autocompletion help for YouCompleteMe
-let g:ycm_autoclose_preview_window_after_completion=1
-map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
+" let g:ycm_autoclose_preview_window_after_completion=1
+" map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
 
 " Virtualenv support
 "python with virtualenv support for YouCompleteMe
@@ -177,3 +177,4 @@ set clipboard=unnamed
 
 Bundle 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
 
+set nobomb
