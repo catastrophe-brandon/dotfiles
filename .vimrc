@@ -107,12 +107,6 @@ if has("autocmd")
 	autocmd BufNewFile,BufRead *.md setlocal filetype=markdown
 endif
 
-" Vundle setup
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-
-Plugin 'gmarik/Vundle.vim'
-call vundle#end()
 filetype plugin indent on
 
 "split navigations
@@ -127,10 +121,6 @@ set foldlevel=99
 
 " Enable folding with the spacebar
 nnoremap <space> za
-
-" Plugin 'tmhedberg/SimplyFold'
-Plugin 'vim-scripts/indentpython.vim'
-" Bundle 'Valloric/YouCompleteMe'
 
 " Handle Python indentation
 au BufNewFile,BufRead *.py
@@ -159,22 +149,23 @@ if 'VIRTUAL_ENV' in os.environ:
   execfile(activate_this, dict(__file__=activate_this))
 EOF
 
-Plugin 'scrooloose/syntastic'
-Plugin 'nvie/vim-flake8'
-
 " Syntax highlighting and checking
 let python_highlight_all=1
 syntax on
 
 " Color schemes
-Plugin 'jnurmine/Zenburn'
-Plugin 'altercation/vim-colors-solarized'
-Plugin 'scrooloose/nerdtree'
+" Plugin 'altercation/vim-colors-solarized'
+" Plugin 'jnurmine/Zenburn'
+" Plugin 'scrooloose/nerdtree'
 let NERDTreeIgnore=['\.pyc$', '\~$'] "ignore files in NERDTree
 
 set nu
 set clipboard=unnamed
 
-Bundle 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
+" Bundle 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
+
+python from powerline.vim import setup as powerline_setup
+python powerline_setup()
+python del powerline_setup
 
 set nobomb

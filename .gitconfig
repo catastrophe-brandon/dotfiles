@@ -1,3 +1,10 @@
+[user]
+	name = Brandon Tweed
+	email = brandon.tweed@gmail.com
+[filter "media"]
+	clean = git media clean %f
+	smudge = git media smudge %f
+	required = true
 [alias]
 
 	# View abbreviated SHA, description, and history graph of the latest 20 commits
@@ -83,6 +90,8 @@
 
 	# Richer, full-history graph log
 	glog = "log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all"
+
+    tug = "pull"
 
 [apply]
 
@@ -191,8 +200,6 @@
 [url "git://gist.github.com/"]
 
 	insteadOf = "gist:"
-[user]
-	name = Brandon Tweed
-	email = btweed@broadvine.com 
+
 [pull]
 	rebase = true
